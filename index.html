@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="Manu Díaz — Brand designer combining strategy, marketing and creative AI. Explore identities, campaigns and digital experiences for ambitious brands."
+    />
+    <title>Manu Díaz — Branding, Marketing &amp; Creative AI</title>
+    <link rel="icon" href="assets/dzmt-logo.png" />
+    <script src="theme.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="assets/vendor/gsap.min.js"></script>
+    <script defer src="projects.js"></script>
+    <script defer src="creative-intro.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="liquid-glass.js"></script>
+    <script defer src="about-portrait.js"></script>
+  </head>
+  <body>
+    <section id="creative-intro" hidden role="dialog" aria-modal="true" aria-labelledby="creative-welcome">
+      <div class="creative-top"><span>Manu Díaz / DZMT studio</span><span>Ideas in motion</span></div>
+      <div class="creative-copy"><p>Branding · Marketing · AI</p><h1 id="creative-welcome">Ideas take shape.</h1></div>
+      <button id="liquid-orb" aria-label="Hold for two seconds to explore my work" aria-describedby="orb-hint"><span class="orb-fallback" aria-hidden="true"></span><canvas id="orb-canvas" aria-hidden="true"></canvas></button>
+      <div class="creative-bottom"><p id="orb-hint">Move to shape. Hold to explore.</p><span class="hold-track" aria-hidden="true"><span></span></span><button id="skip-intro">Explore the work ↗</button></div>
+    </section>
+    <a class="skip" href="#projects">Skip to projects</a>
+    <header class="site-header">
+      <a class="wordmark" href="#space" aria-label="Manu Díaz — home"
+        ><span class="brand-art"
+          ><img class="brand-light" src="assets/dzmt-black.png" alt="" /><img
+            class="brand-dark"
+            src="assets/dzmt-white.png"
+            alt="" /></span
+      ></a>
+      <nav aria-label="Main navigation">
+        <a href="#space" data-page="space" aria-current="page"
+          ><span>Explore</span><sup>1</sup></a
+        >
+        <a href="#projects" data-page="projects"
+          ><span>Selected work</span><sup>2</sup></a
+        >
+        <a href="#about" data-page="about"><span>About</span><sup>3</sup></a>
+      </nav>
+      <div class="site-controls">
+        <button
+          id="theme-toggle"
+          class="chip"
+          aria-label="Dark mode"
+          aria-pressed="false"
+          title="Switch theme"
+        >
+          ◐
+        </button>
+        <button
+          id="sound-toggle"
+          class="chip"
+          aria-label="Sound"
+          aria-pressed="false"
+          title="Sound off"
+        >
+          <span class="sound-dot" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+    <main id="pages">
+      <section
+        id="space-page"
+        class="page space-page"
+        data-view="space"
+        aria-label="Explore the work"
+      >
+        <h1 class="sr-only">Manu Díaz — Brand designer</h1>
+        <div class="space-side left">Manu Díaz</div>
+        <div class="space-side right">Brand designer &amp; visual thinker</div>
+        <div
+          id="sphere"
+          aria-label="Interactive project sphere. Drag or use the arrow keys to rotate."
+          tabindex="0"
+        ></div>
+        <div class="intro-mark" aria-hidden="true">
+          <span class="brand-art"
+            ><img class="brand-light" src="assets/dzmt-black.png" alt="" /><img
+              class="brand-dark"
+              src="assets/dzmt-white.png"
+              alt=""
+          /></span>
+        </div>
+        <div id="space-caption" aria-live="polite">
+          <span id="space-title">Strategy made visible.</span
+          ><span id="space-subtitle">Branding, marketing &amp; creative AI</span>
+        </div>
+        <div class="space-bottom">
+          <span class="interaction-hint">Drag to rotate · Select to explore</span
+          ><span id="space-count">001</span
+          ><button
+            id="motion-toggle"
+            aria-label="Pause motion"
+            aria-pressed="false"
+          >
+            Motion ON
+          </button>
+        </div>
+      </section>
+      <section
+        id="projects-page"
+        class="page scroll-page"
+        data-view="projects"
+        aria-labelledby="projects-heading"
+        hidden
+      >
+        <header class="projects-heading">
+          <h1 id="projects-heading">
+            Selected work <em>Brand identities, campaigns &amp; visual stories</em>
+          </h1>
+        </header>
+        <nav
+          id="collection-index"
+          class="collection-index"
+          aria-label="Project collections"
+        ></nav>
+        <div id="project-grid" class="project-collections"></div>
+        <div class="cv-downloads" aria-label="Download my CV">
+          <section class="project-collection" aria-labelledby="spanish-cv-heading">
+            <header class="collection-heading">
+              <h2 id="spanish-cv-heading"><a href="assets/Manu-CV-Spanish.pdf" download="Manu-Diaz-CV-Spanish.pdf" type="application/pdf" hreflang="es">Download Spanish CV <i aria-hidden="true">↗</i></a></h2>
+              <div class="collection-meta"><span lang="es">Español · PDF</span></div>
+            </header>
+          </section>
+          <section class="project-collection" aria-labelledby="english-cv-heading">
+            <header class="collection-heading">
+              <h2 id="english-cv-heading"><a href="assets/Manu-CV-English.pdf" download="Manu-Diaz-CV-English.pdf" type="application/pdf" hreflang="en">Download English CV <i aria-hidden="true">↗</i></a></h2>
+              <div class="collection-meta"><span>English · PDF</span></div>
+            </header>
+          </section>
+        </div>
+        <footer class="quiet-footer">
+          <span>Manu Díaz</span
+          ><span>Branding &amp; art direction · Zaragoza</span
+          ><a href="mailto:manudiazmat@gmail.com">Let’s connect ↗</a>
+        </footer>
+      </section>
+      <section
+        id="about-page"
+        class="page scroll-page"
+        data-view="about"
+        aria-labelledby="about-heading"
+        hidden
+      >
+        <div class="portrait-layer" aria-hidden="true"><div class="portrait-stage"><div class="portrait-card"><img id="about-portrait" class="portrait-character" src="assets/portrait/character.png" alt="" draggable="false" /><img class="portrait-character portrait-night" src="assets/portrait/character-night.svg" alt="" draggable="false" /><img class="portrait-tablet" src="assets/portrait/tablet.png" alt="" draggable="false" /></div></div></div>
+        <div class="about-opening">
+          <div class="about-statement">
+            <h1 id="about-heading">
+              Brand thinking.<br />Distinctive design.<br />Lasting impressions.
+            </h1>
+            <p>Manu Díaz <span>—</span> DZMT studio / Zaragoza</p>
+          </div>
+          <span class="about-scroll">The thinking behind the work ↓</span>
+        </div>
+        <div class="about-intro">
+          <span>( Design with a point of view )</span>
+          <p data-head-wrap data-side="right">
+            I’m Manu, a brand designer based in Zaragoza. I connect visual identity, marketing thinking and creative AI to shape how brands look, communicate and are perceived. My background in graphic design, animation and 3D brings a visual storytelling perspective to every project.
+          </p>
+        </div>
+        <div class="service-list">
+          <section data-side="left"><h2>Branding</h2><p data-head-wrap>Brand positioning<br />Visual identity<br />Art direction<br />Brand guidelines</p></section>
+          <section data-side="right"><h2>Marketing</h2><p data-head-wrap>Audience research<br />Campaign concepts<br />Brand storytelling<br />Social media content</p></section>
+          <section data-side="left"><h2>Creative AI</h2><p data-head-wrap>Visual research<br />Image exploration<br />Motion &amp; 3D<br />Digital experiences</p></section>
+        </div>
+        <div class="chapters">
+          <section class="chapter">
+            <span class="chapter-label">Ch. One</span>
+            <h2><small>I</small> Strategy</h2>
+            <div><p data-head-wrap data-side="left">A distinctive brand starts with a clear position. I look at its audience, context and ambition to define what it stands for, what makes it relevant and how that should come through visually.</p><p data-head-wrap data-side="right">That thinking guides the creative work: a recognisable identity, a focused message and applications that support the same idea across different channels.</p></div>
+          </section>
+          <section class="chapter">
+            <span class="chapter-label">Ch. Two</span>
+            <h2><small>II</small> Art direction</h2>
+            <div><p data-head-wrap data-side="left">Typography, imagery and composition shape the way a brand is perceived. I use them to create a visual language with character, from the first campaign image to the smallest application.</p><p data-head-wrap data-side="right">My illustration and editorial work sharpen that attention to detail. I develop concepts through visual research and experimentation, then refine the relationships between image, message and format.</p></div>
+          </section>
+          <section class="chapter">
+            <span class="chapter-label">Ch. Three</span>
+            <h2><small>III</small> Creative AI</h2>
+            <div><p data-head-wrap data-side="left">I use generative AI for visual research, concept development and image exploration. It helps me test directions quickly, then refine the strongest ideas through design, composition and art direction.</p><p data-head-wrap data-side="right">My animation and 3D background helps me think beyond a single image. I explore how a visual idea can move, respond and become part of a broader brand experience.</p></div>
+          </section>
+          <section class="chapter">
+            <span class="chapter-label">Ch. Four</span>
+            <h2><small>IV</small> Brand experience</h2>
+            <div><p data-head-wrap data-side="left">I’m especially interested in fashion, lifestyle and luxury, where perception is shaped by every detail: the identity, the imagery, the packaging and the experience.</p><p data-head-wrap data-side="right">I look for consistency across those encounters. The aim is to carry the same point of view from a campaign to a screen or a physical space, with a clear and recognisable character.</p></div>
+          </section>
+        </div>
+        <div class="about-finale">
+          <aside class="finale-visual" aria-hidden="true">
+            <div class="finale-portrait-anchor"></div>
+          </aside>
+          <div class="finale-content">
+            <section class="education" aria-labelledby="education-heading">
+              <p class="finale-eyebrow">( Education &amp; continuous learning )</p>
+              <h2 id="education-heading">Education &amp;<br />development.</h2>
+              <div class="education-row">
+                <span>2022 — 2026</span>
+                <h3>HAC_R Creativo</h3>
+                <p>University Degree in Graphic Design</p>
+              </div>
+              <div class="education-row">
+                <span>2020 — 2022</span>
+                <h3>CPA Salduie</h3>
+                <p>Higher Technician in 3D Animation, Games and Interactive Environments</p>
+              </div>
+              <details>
+                <summary>Further learning &amp; skills <span aria-hidden="true">+</span></summary>
+                <div class="skills">
+                  <ul class="study-list" aria-label="Additional studies">
+                    <li><span>HubSpot · Social Media Marketing</span><time datetime="2026">2026</time></li>
+                    <li><span>LVMH My Certificate</span><time datetime="2026">2026</time></li>
+                    <li><span>Character Design for Concept Art</span><time datetime="2021">2021</time></li>
+                    <li><span>Illustration for Comics: Anatomy of a Superhero</span><time datetime="2021">2021</time></li>
+                    <li><span>Digital Tattoo Design and Illustration with Procreate</span><time datetime="2021">2021</time></li>
+                  </ul>
+                  <div class="skills-group">
+                    <h3>Creative toolkit</h3>
+                    <p>Adobe Creative Suite · Procreate · Figma · Blender<br />Generative AI · 3D animation · Interface design</p>
+                    <p>Brand positioning · Audience research · Campaign concepts · Social media marketing<br />Communication · Creative problem-solving · Organisation · Collaboration</p>
+                  </div>
+                </div>
+              </details>
+              <div class="cv-inline-links" aria-label="Download my CV">
+                <a class="inline-link" href="assets/Manu-CV-Spanish.pdf" download="Manu-Diaz-CV-Spanish.pdf" hreflang="es">Download Spanish CV <i aria-hidden="true">↗</i></a>
+                <a class="inline-link" href="assets/Manu-CV-English.pdf" download="Manu-Diaz-CV-English.pdf" hreflang="en">Download English CV <i aria-hidden="true">↗</i></a>
+              </div>
+            </section>
+            <section class="contact-section" aria-labelledby="contact-heading">
+              <p class="finale-eyebrow">( Opportunities &amp; collaborations )</p>
+              <h2 id="contact-heading">Let’s build<br />what comes next.</h2>
+              <p class="contact-intro">Open to creative roles and collaborations across branding, marketing and AI, with a particular interest in fashion, lifestyle and luxury.</p>
+              <div class="contact-list">
+                <a href="mailto:manudiazmat@gmail.com"><span>Email</span><span>manudiazmat@gmail.com</span><i aria-hidden="true">↗</i></a>
+                <a href="https://www.instagram.com/dzmt.studio/?__d=dist" target="_blank" rel="noopener"><span>Instagram</span><span>@dzmt.studio</span><i aria-hidden="true">↗</i></a>
+                <a href="https://www.linkedin.com/in/manuel-d%C3%ADaz-mateo-7ab257280" target="_blank" rel="noopener"><span>LinkedIn</span><span>Manu Díaz</span><i aria-hidden="true">↗</i></a>
+                <a href="assets/Manu-CV-Spanish.pdf" download="Manu-Diaz-CV-Spanish.pdf" hreflang="es"><span lang="es">Español</span><span>Download Spanish CV</span><i aria-hidden="true">↗</i></a>
+                <a href="assets/Manu-CV-English.pdf" download="Manu-Diaz-CV-English.pdf" hreflang="en"><span>English</span><span>Download English CV</span><i aria-hidden="true">↗</i></a>
+              </div>
+            </section>
+          </div>
+        </div>
+        <footer class="quiet-footer">
+          <span>Manu Díaz / DZMT studio</span><span>2026</span
+          ><a href="#space">Back to explore ↗</a>
+        </footer>
+      </section>
+      <section
+        id="case-page"
+        class="page scroll-page"
+        data-view="case"
+        aria-labelledby="case-title"
+        hidden
+      >
+        <div class="case-top">
+          <a href="#projects">← Selected work</a><span id="case-count"></span>
+        </div>
+        <header class="case-heading">
+          <h1 id="case-title"></h1>
+          <div>
+            <p id="case-description"></p>
+            <dl id="case-meta"></dl>
+            <div id="case-documents"></div>
+          </div>
+        </header>
+        <div id="case-images" class="case-images"></div>
+        <a id="next-project" class="next-project" href="#projects"
+          ><span>Next project</span><span></span
+        ></a>
+        <footer class="quiet-footer">
+          <span>Manu Díaz</span
+          ><a href="mailto:manudiazmat@gmail.com">Start a conversation ↗</a>
+        </footer>
+      </section>
+    </main>
+    <dialog id="preview" aria-labelledby="preview-title">
+      <button
+        id="preview-close"
+        class="chip preview-close"
+        aria-label="Close preview"
+      >
+        Close ×
+      </button>
+      <div class="preview-media">
+        <img id="preview-image" src="assets/images/cerberus.png" alt="" /><video
+          id="preview-video"
+          src="assets/media/studio-film.mp4"
+          poster="assets/media/studio-film-poster.jpg"
+          muted
+          loop
+          playsinline
+          controls
+          hidden
+        ></video>
+      </div>
+      <div class="preview-text">
+        <h2 id="preview-title"></h2>
+        <p id="preview-subtitle"></p>
+        <a id="preview-case" href="#projects">Explore the project ↗</a>
+      </div>
+      <div class="preview-controls">
+        <button id="preview-prev" aria-label="Previous image">←</button
+        ><span id="preview-count"></span
+        ><button id="preview-next" aria-label="Next image">→</button>
+      </div>
+    </dialog>
+    <div id="cursor-label" aria-hidden="true">View</div>
+    <div class="glass-edge top" aria-hidden="true"></div>
+    <div class="glass-edge bottom" aria-hidden="true"></div>
+    <noscript
+      ><div class="noscript">
+        <p>Explore the projects and contact Manu:</p>
+        <a href="assets/Manu-CV-Spanish.pdf" download="Manu-Diaz-CV-Spanish.pdf" hreflang="es">Download Spanish CV</a> ·
+        <a href="assets/Manu-CV-English.pdf" download="Manu-Diaz-CV-English.pdf" hreflang="en">Download English CV</a> ·
+        <a href="mailto:manudiazmat@gmail.com">Email</a>
+        <p>Enable JavaScript to use the interactive portfolio.</p>
+      </div></noscript
+    >
+  </body>
+</html>
